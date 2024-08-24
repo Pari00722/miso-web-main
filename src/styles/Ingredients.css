@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+
+.ingMainParent {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #efebe7f7;
+}
+
+.ingImgHold {
+    display: flex;
+    gap: 100px; /* Increased gap value */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ingItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingImgHold img {
+    width: 100px; /* Adjust this value as needed */
+    height: 100px; /* Ensuring all images have the same height */
+    object-fit: cover; /* To maintain aspect ratio and fill the specified dimensions */
+    transition: transform 0.3s ease;
+}
+
+.ingImgHold img:hover {
+    transform: scale(0.7.0.7);
+}
+
+.ingTextHold {
+    margin-top: 10px;
+    font-size: 24px; /* Adjust this value as needed */
+    font-weight: medium;
+}
+
+.zoom2 {
+    cursor: pointer;
+}
