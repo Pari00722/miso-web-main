@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 .heroSecMainParent {
@@ -79,3 +80,8 @@
     background-color: #173f35;
     border-radius: 40px;
 }
+=======
+.demo {
+    background-color: red;
+}
+>>>>>>> origin/main

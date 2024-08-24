@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from './components/Home.jsx';
@@ -28,3 +29,20 @@ const App = () => {
 }
 
 export default App;
+=======
+// import React from "react";
+// import Home from './components/Home.jsx';
+// import AboutUs from './components/AboutUs.jsx';
+import Footer from './components/Footer';
+
+const App = () => {
+  return (
+    <>
+      {/* <AboutUs /> */}
+      <Footer />
+    </>
+  )
+}
+
+export default App;
+>>>>>>> origin/main
