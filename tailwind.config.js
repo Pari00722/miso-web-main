@@ -3,6 +3,19 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+<<<<<<< HEAD
+       fontFamily: {
+        handlee: ['Handlee', 'cursive'],
+        yeseva: ['"Yeseva One"', 'serif'],
+        times: ['Times New Roman', 'serif']
+      }
+
+
+
+    },
+  },
+  plugins: [],
+=======
       flex: {
         '70': '0 0 60%',
         '30': '0 0 30%',
@@ -52,4 +65,5 @@ export default {
     },
     plugins: [],
   }
+>>>>>>> origin/main
 };
