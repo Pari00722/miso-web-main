@@ -83,3 +83,13 @@
 .demo {
   background-color: red;
 }
+
+@media screen and (max-width: 650px){
+  .heroSecMainParent{
+    margin-bottom: 100px;
+  }
+  .heroRow {
+    flex-direction: column;
+    align-items: center;
+  }
+}
