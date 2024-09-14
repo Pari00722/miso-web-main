@@ -13,117 +13,68 @@ import { FaPhone } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <div className=" bg-[#ac83a9] pt-5 ">
-        <div className=" text-white flex justify-center text-center gap-80">
-          <div className="flex flex-col">
+         <div className="bg-[#ac83a9] pt-5 text-white">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap justify-between text-center mb-10">
+          <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <p className="pb-4 text-2xl font-[Montserrat]">SERVICES</p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Custom laser etching
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Tailored greeting card design
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Engraved wooden products
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Customized mugs
-            </p>
+            <ul className="space-y-2">
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Custom laser etching</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Tailored greeting card design</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Engraved wooden products</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Customized mugs</li>
+            </ul>
           </div>
-          <div className="flex flex-col head">
+          <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <p className="pb-4 text-2xl font-[Montserrat]">COMPANY</p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              About Us
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Our Team
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Contact
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Jobs
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Press Kit
-            </p>
+            <ul className="space-y-2">
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">About Us</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Our Team</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Contact</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Jobs</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Press Kit</li>
+            </ul>
           </div>
-          <div className="  flex flex-col">
+          <div className="w-full md:w-1/4">
             <p className="pb-4 text-2xl font-[Montserrat]">LEGAL</p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Terms Of Use
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Privacy Policy{" "}
-            </p>
-            <p className="content font-[Raleway] text-[18px] transition-all cursor-pointer hover:text-[20px] ease-in-out">
-              Cookie Policy
-            </p>
+            <ul className="space-y-2">
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Terms Of Use</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Privacy Policy</li>
+              <li className="content font-[Raleway] text-[16px] transition-all cursor-pointer hover:text-[18px]">Cookie Policy</li>
+            </ul>
           </div>
         </div>
-
-        <div className=" flex gap-[79%] pl-20 pr-28 pb-10 pt-7">
-          <div className="flex items-center text-center justify-start gap-1 ">
-            <FaRegCopyright />{" "}
-            <p className="text-xl">
-              <strong>MISO</strong>
-            </p>
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center text-center mb-4 md:mb-0">
+            <FaRegCopyright className="mr-2" />
+            <p className="text-xl"><strong>MISO</strong></p>
           </div>
-
-          <div className="flex gap-5 pb-3 text-2xl justify-end  ">
-            <a
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              target="_blank"
-              href="https://www.instagram.com/miso__by_arin?igsh=b3Zoa3NnZGc4OGZ0"
-            >
+          <div className="flex gap-4 text-2xl">
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/miso__by_arin?igsh=b3Zoa3NnZGc4OGZ0">
               <FaInstagram />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out  text-white"
-              href="https://www.linkedin.com/company/miso-creations/"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/miso-creations/">
               <FaLinkedinIn />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              href="https://www.facebook.com/profile.php?id=61563061833928&mibextid=ZbWKwL"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61563061833928&mibextid=ZbWKwL">
               <CiFacebook />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              href="tel:+(91) 9119733531"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="tel:+(91) 9119733531">
               <FaPhone />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              href="mailto:hellomiso21@gmail.com?subject=Hello&body=Hi%20there!"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="mailto:hellomiso21@gmail.com?subject=Hello&body=Hi%20there!">
               <MdOutlineEmail />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              href="https://pin.it/4Ft59jguR"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="https://pin.it/4Ft59jguR">
               <FaPinterest />
             </a>
-            <a
-              target="_blank"
-              className="transition-all hover:text-3xl ease-in-out text-white"
-              href="https://x.com/miso_offical?t=cJYHnpP4WcQJYbT_ct69EA&s=09"
-            >
+            <a className="transition-all hover:text-3xl ease-in-out text-white" target="_blank" rel="noopener noreferrer" href="https://x.com/miso_offical?t=cJYHnpP4WcQJYbT_ct69EA&s=09">
               <FaXTwitter />
             </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
