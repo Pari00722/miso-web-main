@@ -20,7 +20,7 @@ const JournalSection = () => {
         </Link>
       </div>
 
-      <div className="jsRight flex  flex-row gap-20">
+      <div className="jsRight flex flex-col sm:flex-row gap-20">
         {/* Gift Guides Section */}
         <div className="group text-center">
           <Link to={`/journal/gift-guides`}>
