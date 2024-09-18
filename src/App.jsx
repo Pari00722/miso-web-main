@@ -43,7 +43,7 @@ const App = () => {
           />
         </Routes>
         {/* Added Footer component outside of Routes */}
-        <Footer />
+        {/* <Footer /> */}
       </Router>
 
       {/* <Ingredients /> */}
