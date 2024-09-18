@@ -20,7 +20,7 @@ const ProfileCard = ({ image, name, linkedin }) => {
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-bold text-3xl text-blue-600 hover:underline mt-4" // Increase font size and add color
+        className="font-bold text-3xl text-blue-600 ease-in-out hover:text-4xl mt-4" // Increase font size and add color
       >
         <IoLogoLinkedin />
       </a>
@@ -36,6 +36,7 @@ const sortTeamData = (data) => {
     "Content Writing",
     "Marketing Team",
     "Data Analytics",
+    "Product Development Team",
   ];
   return data.sort(
     (a, b) => roleOrder.indexOf(a.role) - roleOrder.indexOf(b.role)
@@ -60,6 +61,7 @@ const OurTeam = () => {
         "Content Writing",
         "Marketing Team",
         "Data Analytics",
+        "Product Development Team",
       ].map((role) => (
         <div key={role} className="mb-10">
           <p className="text-center text-2xl sm:text-3xl px-5 pt-5 pb-7 sm:pb-10 mt-2 font-bold">
