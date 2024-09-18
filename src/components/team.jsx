@@ -10,6 +10,16 @@ import akshay from "../photos/akshay.jpeg";
 import sim from "../photos/Simarjeet.jpg";
 import animesh from "../photos/animesh.jpeg";
 import dummy from "../photos/dummy.jpg";
+import arti from "../photos/arti.jpeg";
+import arbaaz from "../photos/arbaaz.jpeg";
+import joy from "../photos/joy.jpeg";
+import mahi from "../photos/mahi.jpg";
+import ankush from "../photos/ankush.jpeg";
+import anushka from "../photos/anushka.jpeg";
+import sajid from "../photos/sajid.png";
+import jasleen from "../photos/jasleen.jpg";
+import suman from "../photos/suman.jpg";
+import shubham from "../photos/shubham.jpeg";
 
 const teamData = [
   {
@@ -22,7 +32,7 @@ const teamData = [
     name: "Ankush",
     role: "Content Writing",
     linkedin: "https://in.linkedin.com/in/ankush-phalswal-0481512b1",
-    image: dummy,
+    image: ankush,
   },
   {
     name: "Mohit Verma",
@@ -34,7 +44,7 @@ const teamData = [
     name: "Mahi Sharma",
     role: "Content Writing",
     linkedin: "https://www.linkedin.com/in/mahi-sharma-",
-    image: dummy,
+    image: mahi,
   },
   {
     name: "Tanishq Jain",
@@ -46,7 +56,7 @@ const teamData = [
     name: "Anushka Rai",
     role: "HR Team",
     linkedin: "https://in.linkedin.com/in/anushka-rai-a28a61229",
-    image: dummy,
+    image: anushka,
   },
   {
     name: "Paras Wadkar",
@@ -58,7 +68,7 @@ const teamData = [
     name: "Shubham Anand",
     role: "Web Development",
     linkedin: "https://www.linkedin.com/in/shubhamanand8",
-    image: dummy,
+    image: shubham,
   },
   {
     name: "JAMI-UL-MERAJ LUKDE",
@@ -88,11 +98,11 @@ const teamData = [
     name: "Arbaaz Shaikh",
     role: "Content Writing",
     linkedin: "https://www.linkedin.com/in/arbaaz-shaikh-b59751238",
-    image: dummy,
+    image: arbaaz,
   },
   {
     name: "Anish Mankani",
-    role: "Marketing Team",
+    role: "Data Analytics",
     linkedin: "https://www.linkedin.com/in/contactanishmankani",
     image: anish,
   },
@@ -107,7 +117,7 @@ const teamData = [
     name: "Suman Kumari",
     role: "Content Writing",
     linkedin: "https://www.linkedin.com/in/suman-kumari-19240a294",
-    image: dummy,
+    image: suman,
   },
   {
     name: "Shahim Ali",
@@ -125,19 +135,31 @@ const teamData = [
     name: "Joy Harrison",
     role: "Data Analytics",
     linkedin: "https://www.linkedin.com/in/joy-harrison-45b729264",
-    image: dummy,
+    image: joy,
   },
   {
     name: "Arti Tripathi",
     role: "Data Analytics",
     linkedin: "https://www.linkedin.com/in/arti-tripathi1103",
-    image: dummy,
+    image: arti,
   },
   {
     name: "Simarjeet Singh",
     role: "Web Development",
     linkedin: "https://www.linkedin.com/in/simarjeet-singh-83a70b212",
     image: sim,
+  },
+  {
+    name: "Syed Mohd Sajid Rizvi",
+    role: "Product Development Team",
+    linkedin: "https://www.linkedin.com/in/mohd-sajid-5274b2230",
+    image: sajid,
+  },
+  {
+    name: "Jasleen Kaur",
+    role: "HR Team",
+    linkedin: "https://www.linkedin.com/in/jasleen-kaur-1b64a4262",
+    image: jasleen,
   },
 ];
 

@@ -5,25 +5,25 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-// import Home from "./components/Home.jsx";
-// import Ingredients from "./components/Ingredients.jsx";
-// import JournalSection from "./components/JournalSection.jsx";
-// import JournalPage from "./components/JournalPage.jsx";
-// import Blog from "./components/Blog.jsx";
-// import Login from "./components/Login.jsx";
-// import "./index.css";
-// import Signup from "./components/Signup.jsx";
+import Home from "./components/Home.jsx";
+import Ingredients from "./components/Ingredients.jsx";
+import JournalSection from "./components/JournalSection.jsx";
+import JournalPage from "./components/JournalPage.jsx";
+import Blog from "./components/Blog.jsx";
+import Login from "./components/Login.jsx";
+import "./index.css";
+import Signup from "./components/Signup.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import Footer from "./components/Footer.jsx"; // Imported Footer component
 import OurTeam from "./components/OurTeam.jsx";
-// import './styles/auth.scss';
+// import "./styles/auth.scss";
 
 const App = () => {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <>
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ingredients" element={<Ingredients />} />
@@ -41,14 +41,16 @@ const App = () => {
             path="/blog"
             element={isAuthenticated ? <Blog /> : <Navigate to="/login" />}
           />
-        </Routes>{" "}
+        </Routes>
         {/* Added Footer component outside of Routes */}
+        <Footer />
+      </Router>
+
       {/* <Ingredients /> */}
       {/* <JournalSection /> */}
-      {/* </Router> */}
       {/* <AboutUs /> */}
       {/* <Footer /> */}
-      <OurTeam />
+      {/* <OurTeam /> */}
     </>
   );
 };
