@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
-.heroSecMainParent {
+.homeContainer {
   background-color: #efebe7f7;
   text-align: center;
   padding: 2rem;
+}
+
+.heroSection {
+  padding-bottom: 2rem; /* Ensure space below the hero section */
 }
 
 .welcomeStore {
@@ -17,8 +21,9 @@
   margin: 1rem auto;
   max-width: 43rem;
   text-align: center;
-  position: relative;
-  top: -1rem;
+  /* Removed position and top to prevent overlapping */
+  /* position: relative;
+  top: -1rem; */
 }
 
 .heroRow {
@@ -26,6 +31,7 @@
   justify-content: center;
   gap: 4rem;
   margin-top: 2rem;
+  flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 .heroContent {
@@ -45,7 +51,7 @@
 
 .heroText {
   text-align: center;
-  flex-direction: row;
+  /* Removed flex-direction: row to maintain column layout */
 }
 
 .heroHeading {
@@ -84,8 +90,8 @@
   background-color: red;
 }
 
-@media screen and (max-width: 650px){
-  .heroSecMainParent{
+@media screen and (max-width: 650px) {
+  .homeContainer {
     margin-bottom: 100px;
   }
   .heroRow {
