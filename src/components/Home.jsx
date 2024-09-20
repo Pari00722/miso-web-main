@@ -1,70 +1,65 @@
+// Home.jsx
 import React from "react";
-import "../styles/Home.css";
-import JournalSection from "./JournalSection.jsx";
-import Footer from "./Footer.jsx";
-
 import Ingredients from "./Ingredients.jsx";
+import JournalSection from "./JournalSection.jsx";
 
 const Home = () => {
   return (
-    <div className="heroSecMainParent">
-      <p className="welcomeStore">WELCOME TO OUR STORE</p>
-      <p className="heroDescription font-handlee text-2xl">
+    <div className="bg-[#efebe7] text-center pb-8 pt-64 px-4">
+      <p className="text-3xl font-bold mt-8 font-handlee">
+        WELCOME TO OUR STORE
+      </p>
+      <p className="font-handlee text-2xl mt-4 max-w-4xl mx-auto">
         From heartfelt gifts to timeless decor, Miso brings your vision to life.
       </p>
 
-      <div className="heroRow">
-        <div className="heroContent">
+      <div className="flex flex-col md:flex-row justify-center gap-16 mt-8">
+        <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/one.png"
-            className="heroImage"
+            className="w-20 h-20 object-cover"
             alt="Thoughtful Gifts"
           />
-          <div className="heroText font-handlee">
-            <p className="heroHeading text-3xl font-semibold">
-              Thoughtful Gifts
-            </p>
-            <p className="heroDesc text-2xl">
+          <div className="text-center font-handlee mt-4">
+            <p className="text-3xl font-semibold">Thoughtful Gifts</p>
+            <p className="text-2xl text-gray-600 mt-2">
               Handpicked treasures for every special occasion.
             </p>
           </div>
         </div>
 
-        <div className="heroContent">
+        <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/two.png"
-            className="heroImage"
+            className="w-20 h-20 object-cover"
             alt="Crafted with Care"
           />
-          <div className="heroText font-handlee">
-            <p className="heroHeading text-3xl font-semibold">
-              Crafted with Care
-            </p>
-            <p className="heroDesc text-2xl">
+          <div className="text-center font-handlee mt-4">
+            <p className="text-3xl font-semibold">Crafted with Care</p>
+            <p className="text-2xl text-gray-600 mt-2">
               Expertly made with attention to every detail.
             </p>
           </div>
         </div>
 
-        <div className="heroContent ">
+        <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/three.png"
-            className="heroImage"
+            className="w-20 h-20 object-cover"
             alt="Elegance in Every Piece"
           />
-          <div className="heroText font-handlee">
-            <p className="heroHeading text-3xl font-semibold">
-              Elegance in Every Piece
-            </p>
-            <p className="heroDesc text-2xl">
+          <div className="text-center font-handlee mt-4">
+            <p className="text-3xl font-semibold">Elegance in Every Piece</p>
+            <p className="text-2xl text-gray-600 mt-2">
               Sophisticated designs that elevate any gift-giving moment.
             </p>
           </div>
         </div>
       </div>
+
+      {/* Other Components */}
       <Ingredients />
       <JournalSection />
-      <Footer />
     </div>
   );
 };

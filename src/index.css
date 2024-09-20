@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .headerHover {
+    @apply flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md bg-blue-900;
+  }
+}
+@font-face {
+  font-family: "Protest Guerrilla";
+  src: url("path-to-your-font-file.woff2") format("woff2"),
+    url("path-to-your-font-file.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
