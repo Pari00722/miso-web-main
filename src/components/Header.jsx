@@ -47,7 +47,9 @@ const Header = () => {
       <div className="w-full mx-auto bg-white border-b-2 border-b-purple-500 text-purple-400 px-4 py-3 flex items-center gap-20">
         {/* Logo Section */}
         <div className="l-shape-border px-2 h-full flex items-center border border-transparent cursor-pointer duration-100">
-          <img className="w-24 mt-2" src={logo} alt="logo" />
+          <Link to="/">
+            <img className="w-24 mt-2" src={logo} alt="logo" />
+          </Link>
         </div>
 
         {/* Personalized Gifts Dropdown */}
