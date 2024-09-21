@@ -1,7 +1,6 @@
 import React from "react";
 import { IoLogoLinkedin } from "react-icons/io5";
 import teamData from "./team"; // Import the teamData from team.jsx
-import Footer from "./Footer";
 
 // ProfileCard Component
 const ProfileCard = ({ image, name, linkedin }) => {
@@ -81,7 +80,6 @@ const OurTeam = () => {
           </div>
         </div>
       ))}
-      <Footer />
     </div>
   );
 };

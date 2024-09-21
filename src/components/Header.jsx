@@ -47,7 +47,9 @@ const Header = () => {
       <div className="w-full mx-auto bg-white border-b-2 border-b-purple-500 text-purple-400 px-4 py-3 flex items-center gap-20">
         {/* Logo Section */}
         <div className="l-shape-border px-2 h-full flex items-center border border-transparent cursor-pointer duration-100">
-          <img className="w-24 mt-2" src={logo} alt="logo" />
+          <Link to="/">
+            <img className="w-24 mt-2" src={logo} alt="logo" />
+          </Link>
         </div>
 
         {/* Personalized Gifts Dropdown */}
@@ -64,22 +66,22 @@ const Header = () => {
           </h1>
           {openDropdown === "gifts" && (
             <div
-              className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs bg-white  duration-700 ease-in-out text-black rounded-lg shadow-lg z-20"
+              className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs bg-white duration-700 ease-in-out text-black rounded-lg shadow-lg z-20"
               onMouseEnter={handleMouseEnterDropdown}
               onMouseLeave={handleMouseLeaveDropdown}
             >
               <ul className="p-4">
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Custom Mugs
+                  <Link to="/mugs">Custom Mugs</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Personalized Frames
+                  <Link to="/personalized-frames">Personalized Frames</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Nameplates
+                  <Link to="/nameplates">Nameplates</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Star Maps
+                  <Link to="/starmaps">Star Maps</Link>
                 </li>
               </ul>
             </div>
@@ -100,25 +102,25 @@ const Header = () => {
           </h1>
           {openDropdown === "wooden" && (
             <div
-              className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs bg-white  duration-700 ease-in-out text-black rounded-lg shadow-lg z-20"
+              className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-full max-w-xs bg-white duration-700 ease-in-out text-black rounded-lg shadow-lg z-20"
               onMouseEnter={handleMouseEnterDropdown}
               onMouseLeave={handleMouseLeaveDropdown}
             >
               <ul className="p-4">
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Templates
+                  <Link to="/templates">Templates</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Customizable Keychains
+                  <Link to="/keychains">Customizable Keychains</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Engraved Wooden Plaques
+                  <Link to="/plaques">Engraved Wooden Plaques</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Engraved Wooden Coasters
+                  <Link to="/coasters">Engraved Wooden Coasters</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Engraved Wooden Boxes
+                  <Link to="/boxes">Engraved Wooden Boxes</Link>
                 </li>
               </ul>
             </div>
@@ -145,19 +147,19 @@ const Header = () => {
             >
               <ul className="p-4">
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Birthday Cards
+                  <Link to="/birthday">Birthday Cards</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Anniversary Cards
+                  <Link to="/anniversary">Anniversary Cards</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Wedding Cards
+                  <Link to="/wedding">Wedding Cards</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Festive Cards
+                  <Link to="/festive">Festive Cards</Link>
                 </li>
                 <li className="py-2 px-2 rounded hover:text-purple-500 hover:font-bold ease-in-out transition-all duration-200 hover:decoration-purple-500">
-                  Thank You Cards
+                  <Link to="/thank-you">Thank You Cards</Link>
                 </li>
               </ul>
             </div>
@@ -174,14 +176,14 @@ const Header = () => {
 
         {/* Navigation Buttons */}
         <div className="flex items-center">
-          <Link to="/blogs">
-            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-              Blogs
+          <Link to="/blog">
+            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-800 hover:to-blue-800 px-4 py-2 rounded-full">
+              Blog
             </button>
           </Link>
-          <Link to="/login">
-            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-              Login
+          <Link to="/contact">
+            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-800 hover:to-blue-800 px-4 py-2 rounded-full ml-2">
+              Contact Us
             </button>
           </Link>
         </div>
