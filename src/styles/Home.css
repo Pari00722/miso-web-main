@@ -1,3 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+.homeContainer {
+  background-color: #efebe7f7;
+  text-align: center;
+  padding: 2rem;
+}
+
+.heroSection {
+  padding-bottom: 2rem; /* Ensure space below the hero section */
+}
+
+.welcomeStore {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  font-family: "Handlee", cursive;
+}
+
+.heroDescription {
+  margin: 1rem auto;
+  max-width: 43rem;
+  text-align: center;
+  /* Removed position and top to prevent overlapping */
+  /* position: relative;
+  top: -1rem; */
+}
+
+.heroRow {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+  max-width: 300px;
+}
+
+.heroImage {
+  width: 80px; /* Smaller size */
+  height: 80px; /* Ensure all images have the same height */
+  object-fit: cover;
+}
+
+.heroText {
+  text-align: center;
+  /* Removed flex-direction: row to maintain column layout */
+}
+
+.heroHeading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.heroDesc {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #d9cbcb72;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #173f35;
+  border-radius: 40px;
+}
+
 .demo {
-    background-color: red;
+  background-color: red;
+}
+
+@media screen and (max-width: 650px) {
+  .homeContainer {
+    margin-bottom: 100px;
+  }
+  .heroRow {
+    flex-direction: column;
+    align-items: center;
+  }
 }
