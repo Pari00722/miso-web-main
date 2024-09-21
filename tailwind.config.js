@@ -7,6 +7,8 @@ export default {
         handlee: ["Handlee", "cursive"],
         yeseva: ['"Yeseva One"', "serif"],
         times: ["Times New Roman", "serif"],
+        montserrat: ["Montserrat", "sans-serif"], // Added Montserrat
+        raleway: ["Raleway", "sans-serif"], // Added Raleway
       },
       flex: {
         70: "0 0 60%",
