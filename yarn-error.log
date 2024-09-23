@@ -2,7 +2,7 @@ Arguments:
   /usr/local/bin/node /opt/yarn-v1.22.19/bin/yarn.js add postcss-import --dev
 
 PATH: 
-  /vscode/1.89.1.24130/bin/remote-cli:/opt/git/bin:/opt/git/bin:/usr/local/share/nvm/current/bin:/usr/local/share/npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin
+  /opt/git/bin:/vscode/1.89.1.24130/bin/remote-cli:/opt/git/bin:/opt/git/bin:/usr/local/share/nvm/current/bin:/usr/local/share/npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin
 
 Yarn version: 
   1.22.19

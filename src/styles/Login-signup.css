@@ -1,64 +1,87 @@
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto; /* Add top and bottom margins */
+  padding: 20px;
+  background-color: #e7dde6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 90%;
+}
+
+.auth-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ac83a9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: rgb(118, 73, 118);
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.already-have-account a {
+  text-decoration: none;
+  color: rgb(73, 45, 73);
+  font-weight: bold;
+}
+
+.already-have-account a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
   .auth-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #e7dde6;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+      padding: 20px; 
   }
-  
+
   .auth-heading {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.8rem;}
-  
-  
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background-color: #ffffff;
+      font-size: 1.8rem; 
   }
-  
-  .submit-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ac83a9;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+
+  .input-field, .submit-button {
+      font-size: 1rem; 
+      padding: 10px; 
   }
-  
-  .submit-button:hover {
-    background-color: rgb(118, 73, 118);
-  }
-  
-  .auth-container p {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .already-have-account a {
-    text-decoration: none;
-    color: rgb(73, 45, 73); 
-    font-weight: bold;
-  }
-  
-  .already-have-account a:hover {
-    text-decoration: underline;
-  }
-  
+}
