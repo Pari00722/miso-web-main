@@ -16,7 +16,7 @@ const Footer = () => {
   const isActive = (path) => location.pathname === path; // Check if the current route is active
 
   return (
-    <div className="bg-[#ac83a9] pt-5 text-white">
+    <div className="bg-[#ac83a9] pt-5 pb-5 text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between text-center mb-10">
           <div className="w-full md:w-1/4 mb-6 md:mb-0">

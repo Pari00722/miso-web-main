@@ -276,7 +276,7 @@ const JournalPage = () => {
         )}
       </div>
 
-      <div className="footerFeatures3 mt-5 sm:mt-40 flex flex-col sm:flex-row flex-wrap justify-between gap-20 md:gap-20 sm:gap-2 sm:flex-row sm:items-center font-times">
+      <div className="footerFeatures3 mt-5 sm:mt-40 flex flex-col flex-wrap justify-between gap-20 md:gap-20 sm:gap-2 sm:flex-row sm:items-center font-times">
         <div className="flex-1 text-center">
           <FaShippingFast size={32} className="mx-auto mb-2" />
           <p>2 DAY DELIVERY</p>
