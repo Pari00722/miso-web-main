@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const App = () => {
+const Blog = () => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -242,4 +242,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Blog;
