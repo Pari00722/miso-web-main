@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import logo from "../photos/Logo.png";
+import Cart from "./Cart";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -44,7 +45,11 @@ const Header = () => {
 
   return (
     <div className="relative z-50">
-      <div className="w-full mx-auto bg-white border-b-2 border-b-purple-500 text-purple-400 px-4 py-3 flex items-center gap-20">
+      {/* Updated header with gradient background */}
+      <div
+        className="w-full mx-auto bg-white border-b-2 border-b-purple-500 text-purple-400 px-4 py-3 flex items-center gap-20"
+        style={{ background: "linear-gradient(to bottom, white 40%, #D6BCFA)" }}
+      >
         {/* Logo Section */}
         <div className="l-shape-border px-2 h-full flex items-center border border-transparent cursor-pointer duration-100">
           <Link to="/">
@@ -170,20 +175,24 @@ const Header = () => {
         <div className="flex items-center">
           {/* Wrap the icon in a Link if it navigates to the cart page */}
           <div className="text-2xl transition-transform duration-300 ease-in-out transform hover:scale-110">
-            <FaShoppingCart />
+            <Link to="/cart">
+              {" "}
+              <FaShoppingCart />
+            </Link>
           </div>
         </div>
 
         {/* Navigation Buttons */}
         <div className="flex items-center">
           <Link to="/blog">
-            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-800 hover:to-blue-800 px-4 py-2 rounded-full">
-              Blog
+            <button className="text-white bg-gradient-to-b from-purple-500 to-purple-700 hover:to-purple-900 px-4 py-2 mx-2 rounded-lg">
+              BLOG
             </button>
           </Link>
-          <Link to="/contact">
-            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-800 hover:to-blue-800 px-4 py-2 rounded-full ml-2">
-              Contact Us
+
+          <Link to="/login">
+            <button className="text-white bg-gradient-to-b from-purple-500 to-purple-700 hover:to-purple-900 px-4 py-2 mx-2 rounded-lg">
+              LOGIN
             </button>
           </Link>
         </div>

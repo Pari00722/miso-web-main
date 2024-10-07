@@ -1,4 +1,3 @@
-// Home.jsx
 import React from "react";
 import Ingredients from "./Ingredients.jsx";
 import JournalSection from "./JournalSection.jsx";
@@ -17,7 +16,7 @@ const Home = () => {
         <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/one.png"
-            className="w-20 h-20 object-cover"
+            className="w-20 h-20 object-cover transform transition duration-300 hover:scale-110"
             alt="Thoughtful Gifts"
           />
           <div className="text-center font-handlee mt-4">
@@ -31,7 +30,7 @@ const Home = () => {
         <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/two.png"
-            className="w-20 h-20 object-cover"
+            className="w-20 h-20 object-cover transform transition duration-300 hover:scale-110"
             alt="Crafted with Care"
           />
           <div className="text-center font-handlee mt-4">
@@ -45,7 +44,7 @@ const Home = () => {
         <div className="flex flex-col items-center max-w-xs">
           <img
             src="/assets/three.png"
-            className="w-20 h-20 object-cover"
+            className="w-20 h-20 object-cover transform transition duration-300 hover:scale-110"
             alt="Elegance in Every Piece"
           />
           <div className="text-center font-handlee mt-4">

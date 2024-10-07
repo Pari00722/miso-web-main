@@ -30,7 +30,7 @@ import CustomLaserEtching from "./components/CustomLaserEtching.jsx";
 import TailoredGreetingCardDesign from "./components/TailoredGreetingCardDesign.jsx";
 import EngravedWoodenProducts from "./components/EngravedWoodenProducts.jsx";
 import CustomizedMugs from "./components/CustomizedMugs.jsx";
-
+import Cart from "./components/Cart.jsx";
 // Importing new components
 import Wedding from "./components/Wedding.jsx";
 import BirthDay from "./components/BirthDay.jsx";
@@ -92,7 +92,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
           {/* About Us Routes */}
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-team" element={<OurTeam />} />
-
+          <Route path="/cart" element={<Cart />} />
           {/* Services Routes */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/cookie" element={<Cookie />} />
@@ -133,7 +133,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
-      <Footer /> {/* Footer appears at the bottom */}
+      <Footer />
     </div>
   );
 };

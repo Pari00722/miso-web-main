@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /opt/yarn-v1.22.19/bin/yarn.js add postcss-import --dev
+  /usr/local/bin/node /opt/yarn-v1.22.19/bin/yarn.js add firebase
 
 PATH: 
   /opt/git/bin:/vscode/1.89.1.24130/bin/remote-cli:/opt/git/bin:/opt/git/bin:/usr/local/share/nvm/current/bin:/usr/local/share/npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile '/root/.cache/yarn/v6/npm-globals-13.24.0-integrity/node_modules/globals/globals.json' -> '/project/workspace/node_modules/@eslint/eslintrc/node_modules/globals/globals.json'
+  Error: ENOENT: no such file or directory, copyfile '/root/.cache/yarn/v6/npm-globals-13.24.0-integrity/node_modules/globals/globals.json' -> '/project/workspace/node_modules/eslint/node_modules/globals/globals.json'
 
 npm manifest: 
   {
