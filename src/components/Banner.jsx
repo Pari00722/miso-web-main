@@ -67,7 +67,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full h-64 md:h-80 lg:h-96 relative z-10">
+    <div className="w-full h-1 md:h-80 lg:h-96 relative z-10">
       <Slider {...settings}>
         <div>
           <img
