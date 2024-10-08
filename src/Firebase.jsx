@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider} from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { createContext, useContext } from "react";
 
 // Firebase configuration for your project
 const firebaseConfig = {
@@ -13,6 +14,12 @@ const firebaseConfig = {
   databaseURL: "https://miso-55ec9-default-rtdb.firebaseio.com",
 };
 
+const FirebaseContext = createContext(null);
+export const useFirebase = () => useContext(FirebaseContext);
+
+export const FirebaseProvider = (props) => {
+  return <FirebaseContext.Provider>{props.children}</FirebaseContext.Provider>;
+};
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
 
