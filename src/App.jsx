@@ -1,5 +1,4 @@
-// App.jsx
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-// Importing components from both files
+// Importing components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
@@ -31,14 +30,18 @@ import TailoredGreetingCardDesign from "./components/TailoredGreetingCardDesign.
 import EngravedWoodenProducts from "./components/EngravedWoodenProducts.jsx";
 import CustomizedMugs from "./components/CustomizedMugs.jsx";
 import Cart from "./components/Cart.jsx";
+import LoginError from "./components/LoginError.jsx";
+import ProductDetail from "./components/ProductDetail.jsx";
+import BestSellers from "./components/BestSellers";
+
 // Importing new components
 import Wedding from "./components/Wedding.jsx";
 import BirthDay from "./components/BirthDay.jsx";
-import ThankYou from "./components/ThankYou.jsx"; // Corrected from ThankYoy.jsx
+import ThankYou from "./components/ThankYou.jsx";
 import Anniversary from "./components/Anniversary.jsx";
 import StarMaps from "./components/StarMaps.jsx";
 import Templates from "./components/Templates.jsx";
-import Plagues from "./components/Plagues.jsx"; // Corrected from Plagues.jsx
+import Plagues from "./components/Plagues.jsx";
 import PersonalizedFrames from "./components/PersonalizedFrames.jsx";
 import Nameplates from "./components/Nameplates.jsx";
 import Keychains from "./components/Keychains.jsx";
@@ -82,6 +85,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
             path="/signup"
             element={<Signup setIsAuthenticated={setIsAuthenticated} />}
           />
+          <Route path="/login-error" element={<LoginError />} />
 
           {/* Protected Route */}
           <Route
@@ -92,7 +96,7 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
           {/* About Us Routes */}
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/cart" element={<Cart />} />
+
           {/* Services Routes */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/cookie" element={<Cookie />} />
@@ -129,11 +133,16 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
           <Route path="/keychains" element={<Keychains />} />
           <Route path="/starmaps" element={<StarMaps />} />
 
+          {/* Product and Cart Routes */}
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/best-sellers" element={<BestSellers />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+
           {/* Fallback Route */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer /> {/* Footer appears at the bottom */}
     </div>
   );
 };

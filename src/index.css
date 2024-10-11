@@ -9,6 +9,7 @@
 }
 @font-face {
   font-family: "Protest Guerrilla";
+  font-family: "Crimson Text", serif;
   src: url("path-to-your-font-file.woff2") format("woff2"),
     url("path-to-your-font-file.woff") format("woff");
   font-weight: normal;
