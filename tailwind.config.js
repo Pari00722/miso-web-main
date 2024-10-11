@@ -9,6 +9,7 @@ export default {
         times: ["Times New Roman", "serif"],
         montserrat: ["Montserrat", "sans-serif"], // Added Montserrat
         raleway: ["Raleway", "sans-serif"], // Added Raleway
+        crimson: ['"Crimson Text"', "serif"], // added crimson
       },
       flex: {
         70: "0 0 60%",

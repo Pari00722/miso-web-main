@@ -1,6 +1,7 @@
 import React from "react";
 import Ingredients from "./Ingredients.jsx";
 import JournalSection from "./JournalSection.jsx";
+import BestSellers from "./BestSellers.jsx";
 
 const Home = () => {
   return (
@@ -58,6 +59,7 @@ const Home = () => {
 
       {/* Other Components */}
       <Ingredients />
+      <BestSellers />
       <JournalSection />
     </div>
   );
