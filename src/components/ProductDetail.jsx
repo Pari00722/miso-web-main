@@ -1,5 +1,8 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth"; // Firebase auth import
+import { auth } from "../Firebase"; // Import your Firebase auth setup
+import StarRating from "./StarRating";
 
 const productsData = [
   {
@@ -38,6 +41,51 @@ const productsData = [
 const ProductDetail = () => {
   const { id } = useParams();
   const product = productsData.find((p) => p.id === parseInt(id));
+  const [reviews, setReviews] = useState([]);
+  const [showReviewForm, setShowReviewForm] = useState(false); // For dropdown form visibility
+  const [user, setUser] = useState(null); // User state to track authentication
+  const [reviewContent, setReviewContent] = useState({
+    name: "",
+    review: "",
+  }); // Review input fields
+  const navigate = useNavigate();
+
+  // Track authentication state
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user); // If the user is logged in
+      } else {
+        setUser(null); // If the user is not logged in
+      }
+    });
+  }, []);
+
+  // Dummy handleRating function to avoid the error
+  const handleRating = (rating) => {
+    console.log(`User rated: ${rating}`);
+  };
+
+  const handleBuyNow = () => {
+    if (user) {
+      // User is logged in, redirect to the respective page
+      navigate(`/purchase/${product.id}`);
+    } else {
+      // User is not logged in, show login box
+      navigate("/login");
+    }
+  };
+
+  const handleReviewSubmit = (e) => {
+    e.preventDefault();
+    const newReview = {
+      name: reviewContent.name,
+      review: reviewContent.review,
+    };
+    setReviews([...reviews, newReview]); // Add new review to the reviews array
+    setReviewContent({ name: "", review: "" }); // Reset the form fields
+    setShowReviewForm(false); // Close the review form after submission
+  };
 
   return (
     <div className="container mx-auto py-12">
@@ -56,14 +104,85 @@ const ProductDetail = () => {
             <p className="text-xl font-semibold mb-4">
               ${product.price.toFixed(2)}
             </p>
-            <button className="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition duration-300">
-              Add to Cart
-            </button>
+
+            {/* Star Rating Component */}
+            <StarRating onRating={handleRating} />
+
+            {/* Add to Cart and Buy Now buttons */}
+            <div className="flex space-x-4">
+              <button className="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-transform duration-300 transform hover:scale-110 active:scale-110 cursor-pointer">
+                Add to Cart
+              </button>
+              <button
+                className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-purple-600 transition-transform duration-300 transform hover:scale-110 active:scale-110 cursor-pointer"
+                onClick={handleBuyNow} // Handle the Buy Now click
+              >
+                Buy Now
+              </button>
+            </div>
+
             <div className="mt-6">
               <h2 className="text-2xl font-bold">Customer Reviews</h2>
-              <p className="mt-2 text-gray-600">
-                No reviews yet. Be the first to write a review!
-              </p>
+              {/* Conditionally render reviews or "no reviews" message */}
+              {reviews.length === 0 ? (
+                <p
+                  className="text-black underline cursor-pointer hover:text-blue-700 transition-colors"
+                  onClick={() => setShowReviewForm(!showReviewForm)}
+                >
+                  No reviews yet, be the first one to write a review.
+                </p>
+              ) : (
+                reviews.map((review, index) => (
+                  <div key={index} className="mt-2">
+                    <p className="font-bold">{review.name}:</p>
+                    <p>{review.review}</p>
+                  </div>
+                ))
+              )}
+
+              {/* Review Form Dropdown */}
+              {showReviewForm && (
+                <form
+                  className="mt-4 border p-4 rounded shadow-lg"
+                  onSubmit={handleReviewSubmit}
+                >
+                  <div className="mb-4">
+                    <label className="block mb-2 font-bold">Name</label>
+                    <input
+                      type="text"
+                      className="w-full p-2 border border-gray-300 rounded"
+                      value={reviewContent.name}
+                      onChange={(e) =>
+                        setReviewContent({
+                          ...reviewContent,
+                          name: e.target.value,
+                        })
+                      }
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block mb-2 font-bold">Review</label>
+                    <textarea
+                      className="w-full p-2 border border-gray-300 rounded"
+                      value={reviewContent.review}
+                      onChange={(e) =>
+                        setReviewContent({
+                          ...reviewContent,
+                          review: e.target.value,
+                        })
+                      }
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-purple-600"
+                  >
+                    Submit Review
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

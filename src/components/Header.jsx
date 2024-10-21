@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import logo from "../photos/Logo.png";
 // import Cart from "./Cart";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null); // 'gifts', 'wooden', 'cards'
@@ -17,6 +17,42 @@ const Header = () => {
   const [activeDropdownMobile, setActiveDropdownMobile] = useState(null);
 
   let s_width = screen.width;
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Manages login state
+  const navigate = useNavigate();
+  const [logoutMessage, setLogoutMessage] = useState("");
+
+  // const handleLoginLogout = () => {
+  //   if (isLoggedIn) {
+  //     // Handle logout logic here
+  //     setIsLoggedIn(false);
+  //     navigate('/'); // Redirect to home or another page after logout
+  //   } else {
+  //     // Redirect to login page if not logged in
+  //     navigate('/login');
+  //   }
+  // };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    navigate("/login-success"); // Always navigate to the success page after logging in
+  };
+
+  const handleLogout = () => {
+    if (window.confirm("Are you sure you want to logout?")) {
+      // Clear the user authentication token, email, phone number, and any related session info
+      localStorage.removeItem("authToken"); // Token storage (if using)
+      localStorage.removeItem("userEmail"); // Clear stored email
+      localStorage.removeItem("userPhone"); // Clear stored phone number
+      sessionStorage.removeItem("userSession"); // Session storage (if using)
+
+      // Set logged-in status to false
+      setIsLoggedIn(false);
+
+      // Navigate to the 'Logged out successfully' page
+      navigate("/logout-success");
+    }
+  };
 
   const handleMouseEnter = (dropdown) => {
     if (dropdownTimeout) {
@@ -219,6 +255,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Buttons */}
+          {/* Navigation Buttons */}
           <div className="flex items-center">
             <Link to="/blog">
               <button className="text-white bg-gradient-to-b from-purple-500 to-purple-700 hover:to-purple-900 px-4 py-2 mx-2 rounded-lg">
@@ -226,11 +263,18 @@ const Header = () => {
               </button>
             </Link>
 
-            <Link to="/login">
-              <button className="text-white bg-gradient-to-b from-purple-500 to-purple-700 hover:to-purple-900 px-4 py-2 mx-2 rounded-lg">
-                LOGIN
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                if (isLoggedIn) {
+                  handleLogout(); // Show confirmation dialog
+                } else {
+                  handleLogin(); // Log in and navigate to the login success page
+                }
+              }}
+              className="text-white bg-gradient-to-b from-purple-500 to-purple-700 hover:to-purple-900 px-4 py-2 mx-2 rounded-lg"
+            >
+              {isLoggedIn ? "LOGOUT" : "LOGIN"}
+            </button>
           </div>
         </div>
       </div>

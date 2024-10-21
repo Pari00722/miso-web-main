@@ -33,6 +33,8 @@ import Cart from "./components/Cart.jsx";
 import LoginError from "./components/LoginError.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
 import BestSellers from "./components/BestSellers";
+import LogoutSuccess from "./components/LogoutSuccess.jsx"; // Import the new page
+import LoginSuccess from "./components/LoginSuccess.jsx";
 
 // Importing new components
 import Wedding from "./components/Wedding.jsx";
@@ -137,6 +139,9 @@ const AppContent = ({ isAuthenticated, setIsAuthenticated }) => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/best-sellers" element={<BestSellers />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+
+          <Route path="/login-success" element={<LoginSuccess />} />
+          <Route path="/logout-success" element={<LogoutSuccess />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<Navigate to="/" />} />
